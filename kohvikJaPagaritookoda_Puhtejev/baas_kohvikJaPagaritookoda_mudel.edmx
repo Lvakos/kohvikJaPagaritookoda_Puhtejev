@@ -1,0 +1,1033 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="baas_kohvikJaPagaritookoda_mudel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="baas_kohvikJaPagaritookoda_mudelStoreContainer">
+    <EntitySet Name="tootajaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.tootajaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ametSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.ametSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ametimaaratusSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.ametimaaratusSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="kohtSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.kohtSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="kategooriaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.kategooriaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="toodeSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.toodeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="koostisosaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.koostisosaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="klientSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.klientSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="laudSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.laudSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="toodeKoostisosaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.toodeKoostisosaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="laduSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.laduSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tellimusSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.tellimusSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tellimuseToodeSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.tellimuseToodeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="tarnijaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.tarnijaSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="arveSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.arveSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="brooneringSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.brooneringSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="salvestusSet" EntityType="baas_kohvikJaPagaritookoda_mudel.Store.salvestusSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ametametimaaratus" Association="baas_kohvikJaPagaritookoda_mudel.Store.ametametimaaratus">
+      <End Role="amet" EntitySet="ametSet" />
+      <End Role="ametimaaratus" EntitySet="ametimaaratusSet" />
+    </AssociationSet>
+    <AssociationSet Name="tootajaametimaaratus" Association="baas_kohvikJaPagaritookoda_mudel.Store.tootajaametimaaratus">
+      <End Role="tootaja" EntitySet="tootajaSet" />
+      <End Role="ametimaaratus" EntitySet="ametimaaratusSet" />
+    </AssociationSet>
+    <AssociationSet Name="kohtametimaaratus" Association="baas_kohvikJaPagaritookoda_mudel.Store.kohtametimaaratus">
+      <End Role="koht" EntitySet="kohtSet" />
+      <End Role="ametimaaratus" EntitySet="ametimaaratusSet" />
+    </AssociationSet>
+    <AssociationSet Name="kategooriatoode" Association="baas_kohvikJaPagaritookoda_mudel.Store.kategooriatoode">
+      <End Role="kategooria" EntitySet="kategooriaSet" />
+      <End Role="toode" EntitySet="toodeSet" />
+    </AssociationSet>
+    <AssociationSet Name="laudklient" Association="baas_kohvikJaPagaritookoda_mudel.Store.laudklient">
+      <End Role="laud" EntitySet="laudSet" />
+      <End Role="klient" EntitySet="klientSet" />
+    </AssociationSet>
+    <AssociationSet Name="klienttellimus" Association="baas_kohvikJaPagaritookoda_mudel.Store.klienttellimus">
+      <End Role="klient" EntitySet="klientSet" />
+      <End Role="tellimus" EntitySet="tellimusSet" />
+    </AssociationSet>
+    <AssociationSet Name="tellimusarve" Association="baas_kohvikJaPagaritookoda_mudel.Store.tellimusarve">
+      <End Role="tellimus" EntitySet="tellimusSet" />
+      <End Role="arve" EntitySet="arveSet" />
+    </AssociationSet>
+    <AssociationSet Name="kohttellimus" Association="baas_kohvikJaPagaritookoda_mudel.Store.kohttellimus">
+      <End Role="koht" EntitySet="kohtSet" />
+      <End Role="tellimus" EntitySet="tellimusSet" />
+    </AssociationSet>
+    <AssociationSet Name="toodetoodeKoostisosa" Association="baas_kohvikJaPagaritookoda_mudel.Store.toodetoodeKoostisosa">
+      <End Role="toode" EntitySet="toodeSet" />
+      <End Role="toodeKoostisosa" EntitySet="toodeKoostisosaSet" />
+    </AssociationSet>
+    <AssociationSet Name="koostisosatoodeKoostisosa" Association="baas_kohvikJaPagaritookoda_mudel.Store.koostisosatoodeKoostisosa">
+      <End Role="koostisosa" EntitySet="koostisosaSet" />
+      <End Role="toodeKoostisosa" EntitySet="toodeKoostisosaSet" />
+    </AssociationSet>
+    <AssociationSet Name="ladusalvestus" Association="baas_kohvikJaPagaritookoda_mudel.Store.ladusalvestus">
+      <End Role="ladu" EntitySet="laduSet" />
+      <End Role="salvestus" EntitySet="salvestusSet" />
+    </AssociationSet>
+    <AssociationSet Name="koostisosasalvestus" Association="baas_kohvikJaPagaritookoda_mudel.Store.koostisosasalvestus">
+      <End Role="koostisosa" EntitySet="koostisosaSet" />
+      <End Role="salvestus" EntitySet="salvestusSet" />
+    </AssociationSet>
+    <AssociationSet Name="tarnijasalvestus" Association="baas_kohvikJaPagaritookoda_mudel.Store.tarnijasalvestus">
+      <End Role="tarnija" EntitySet="tarnijaSet" />
+      <End Role="salvestus" EntitySet="salvestusSet" />
+    </AssociationSet>
+    <AssociationSet Name="tellimustellimuseToode" Association="baas_kohvikJaPagaritookoda_mudel.Store.tellimustellimuseToode">
+      <End Role="tellimus" EntitySet="tellimusSet" />
+      <End Role="tellimuseToode" EntitySet="tellimuseToodeSet" />
+    </AssociationSet>
+    <AssociationSet Name="toodetellimuseToode" Association="baas_kohvikJaPagaritookoda_mudel.Store.toodetellimuseToode">
+      <End Role="toode" EntitySet="toodeSet" />
+      <End Role="tellimuseToode" EntitySet="tellimuseToodeSet" />
+    </AssociationSet>
+    <AssociationSet Name="klientbroonering" Association="baas_kohvikJaPagaritookoda_mudel.Store.klientbroonering">
+      <End Role="klient" EntitySet="klientSet" />
+      <End Role="broonering" EntitySet="brooneringSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="tootajaSet">
+    <Key>
+      <PropertyRef Name="tootajaID" />
+    </Key>
+    <Property Name="tootajaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="isikukood" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ametSet">
+    <Key>
+      <PropertyRef Name="ametID" />
+    </Key>
+    <Property Name="ametID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="kirjeldus" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ametimaaratusSet">
+    <Key>
+      <PropertyRef Name="ametimaaratusID" />
+    </Key>
+    <Property Name="ametimaaratusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="algus_kuupaev" Type="datetime" Nullable="false" />
+    <Property Name="amet_ametID" Type="int" Nullable="false" />
+    <Property Name="tootaja_tootajaID" Type="int" Nullable="false" />
+    <Property Name="koht_kohtID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kohtSet">
+    <Key>
+      <PropertyRef Name="kohtID" />
+    </Key>
+    <Property Name="kohtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kohtNimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tel" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kategooriaSet">
+    <Key>
+      <PropertyRef Name="kategooriaID" />
+    </Key>
+    <Property Name="kategooriaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="kirjeldus" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="toodeSet">
+    <Key>
+      <PropertyRef Name="toodeID" />
+    </Key>
+    <Property Name="toodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="kirjeldus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="hind" Type="decimal" Nullable="false" Precision="6" Scale="2" />
+    <Property Name="kategooria_kategooriaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="koostisosaSet">
+    <Key>
+      <PropertyRef Name="koostisosaID" />
+    </Key>
+    <Property Name="koostisosaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="klientSet">
+    <Key>
+      <PropertyRef Name="klientID" />
+    </Key>
+    <Property Name="klientID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="laud_laudID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laudSet">
+    <Key>
+      <PropertyRef Name="laudID" />
+    </Key>
+    <Property Name="laudID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="number" Type="bigint" Nullable="false" />
+    <Property Name="kohtadeArv" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="toodeKoostisosaSet">
+    <Key>
+      <PropertyRef Name="toodeKoostisosaID" />
+    </Key>
+    <Property Name="toodeKoostisosaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kogus" Type="bigint" Nullable="false" />
+    <Property Name="toode_toodeID" Type="int" Nullable="false" />
+    <Property Name="koostisosa_koostisosaID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="laduSet">
+    <Key>
+      <PropertyRef Name="laduID" />
+    </Key>
+    <Property Name="laduID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nimetus" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="aadress" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tellimusSet">
+    <Key>
+      <PropertyRef Name="tellimusID" />
+    </Key>
+    <Property Name="tellimusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="klient_klientID" Type="int" Nullable="false" />
+    <Property Name="koht_kohtID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tellimuseToodeSet">
+    <Key>
+      <PropertyRef Name="tellimuseToodeID" />
+    </Key>
+    <Property Name="tellimuseToodeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tellimus_tellimusID" Type="int" Nullable="false" />
+    <Property Name="toode_toodeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tarnijaSet">
+    <Key>
+      <PropertyRef Name="tarnijaID" />
+    </Key>
+    <Property Name="tarnijaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tarnijaNimi" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="arveSet">
+    <Key>
+      <PropertyRef Name="arveID" />
+    </Key>
+    <Property Name="arveID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="summa" Type="decimal" Nullable="false" Precision="6" Scale="2" />
+    <Property Name="date" Type="datetime" Nullable="false" />
+    <Property Name="tellimus_tellimusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="brooneringSet">
+    <Key>
+      <PropertyRef Name="brooneringID" />
+    </Key>
+    <Property Name="brooneringID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="aeg" Type="datetime" Nullable="false" />
+    <Property Name="klient_klientID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="salvestusSet">
+    <Key>
+      <PropertyRef Name="salvestusID" />
+    </Key>
+    <Property Name="salvestusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ladu_laduID" Type="int" Nullable="false" />
+    <Property Name="koostisosa_koostisosaID" Type="int" Nullable="false" />
+    <Property Name="tarnija_tarnijaID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ametametimaaratus">
+    <End Role="amet" Type="baas_kohvikJaPagaritookoda_mudel.Store.ametSet" Multiplicity="1" />
+    <End Role="ametimaaratus" Type="baas_kohvikJaPagaritookoda_mudel.Store.ametimaaratusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="amet">
+        <PropertyRef Name="ametID" />
+      </Principal>
+      <Dependent Role="ametimaaratus">
+        <PropertyRef Name="amet_ametID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tootajaametimaaratus">
+    <End Role="tootaja" Type="baas_kohvikJaPagaritookoda_mudel.Store.tootajaSet" Multiplicity="1" />
+    <End Role="ametimaaratus" Type="baas_kohvikJaPagaritookoda_mudel.Store.ametimaaratusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tootaja">
+        <PropertyRef Name="tootajaID" />
+      </Principal>
+      <Dependent Role="ametimaaratus">
+        <PropertyRef Name="tootaja_tootajaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kohtametimaaratus">
+    <End Role="koht" Type="baas_kohvikJaPagaritookoda_mudel.Store.kohtSet" Multiplicity="1" />
+    <End Role="ametimaaratus" Type="baas_kohvikJaPagaritookoda_mudel.Store.ametimaaratusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="koht">
+        <PropertyRef Name="kohtID" />
+      </Principal>
+      <Dependent Role="ametimaaratus">
+        <PropertyRef Name="koht_kohtID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kategooriatoode">
+    <End Role="kategooria" Type="baas_kohvikJaPagaritookoda_mudel.Store.kategooriaSet" Multiplicity="1" />
+    <End Role="toode" Type="baas_kohvikJaPagaritookoda_mudel.Store.toodeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="kategooria">
+        <PropertyRef Name="kategooriaID" />
+      </Principal>
+      <Dependent Role="toode">
+        <PropertyRef Name="kategooria_kategooriaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="laudklient">
+    <End Role="laud" Type="baas_kohvikJaPagaritookoda_mudel.Store.laudSet" Multiplicity="1" />
+    <End Role="klient" Type="baas_kohvikJaPagaritookoda_mudel.Store.klientSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="laud">
+        <PropertyRef Name="laudID" />
+      </Principal>
+      <Dependent Role="klient">
+        <PropertyRef Name="laud_laudID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="klienttellimus">
+    <End Role="klient" Type="baas_kohvikJaPagaritookoda_mudel.Store.klientSet" Multiplicity="1" />
+    <End Role="tellimus" Type="baas_kohvikJaPagaritookoda_mudel.Store.tellimusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="klient">
+        <PropertyRef Name="klientID" />
+      </Principal>
+      <Dependent Role="tellimus">
+        <PropertyRef Name="klient_klientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tellimusarve">
+    <End Role="tellimus" Type="baas_kohvikJaPagaritookoda_mudel.Store.tellimusSet" Multiplicity="1" />
+    <End Role="arve" Type="baas_kohvikJaPagaritookoda_mudel.Store.arveSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tellimus">
+        <PropertyRef Name="tellimusID" />
+      </Principal>
+      <Dependent Role="arve">
+        <PropertyRef Name="tellimus_tellimusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="kohttellimus">
+    <End Role="koht" Type="baas_kohvikJaPagaritookoda_mudel.Store.kohtSet" Multiplicity="1" />
+    <End Role="tellimus" Type="baas_kohvikJaPagaritookoda_mudel.Store.tellimusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="koht">
+        <PropertyRef Name="kohtID" />
+      </Principal>
+      <Dependent Role="tellimus">
+        <PropertyRef Name="koht_kohtID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="toodetoodeKoostisosa">
+    <End Role="toode" Type="baas_kohvikJaPagaritookoda_mudel.Store.toodeSet" Multiplicity="1" />
+    <End Role="toodeKoostisosa" Type="baas_kohvikJaPagaritookoda_mudel.Store.toodeKoostisosaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="toode">
+        <PropertyRef Name="toodeID" />
+      </Principal>
+      <Dependent Role="toodeKoostisosa">
+        <PropertyRef Name="toode_toodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="koostisosatoodeKoostisosa">
+    <End Role="koostisosa" Type="baas_kohvikJaPagaritookoda_mudel.Store.koostisosaSet" Multiplicity="1" />
+    <End Role="toodeKoostisosa" Type="baas_kohvikJaPagaritookoda_mudel.Store.toodeKoostisosaSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="koostisosa">
+        <PropertyRef Name="koostisosaID" />
+      </Principal>
+      <Dependent Role="toodeKoostisosa">
+        <PropertyRef Name="koostisosa_koostisosaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ladusalvestus">
+    <End Role="ladu" Type="baas_kohvikJaPagaritookoda_mudel.Store.laduSet" Multiplicity="1" />
+    <End Role="salvestus" Type="baas_kohvikJaPagaritookoda_mudel.Store.salvestusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ladu">
+        <PropertyRef Name="laduID" />
+      </Principal>
+      <Dependent Role="salvestus">
+        <PropertyRef Name="ladu_laduID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="koostisosasalvestus">
+    <End Role="koostisosa" Type="baas_kohvikJaPagaritookoda_mudel.Store.koostisosaSet" Multiplicity="1" />
+    <End Role="salvestus" Type="baas_kohvikJaPagaritookoda_mudel.Store.salvestusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="koostisosa">
+        <PropertyRef Name="koostisosaID" />
+      </Principal>
+      <Dependent Role="salvestus">
+        <PropertyRef Name="koostisosa_koostisosaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tarnijasalvestus">
+    <End Role="tarnija" Type="baas_kohvikJaPagaritookoda_mudel.Store.tarnijaSet" Multiplicity="1" />
+    <End Role="salvestus" Type="baas_kohvikJaPagaritookoda_mudel.Store.salvestusSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tarnija">
+        <PropertyRef Name="tarnijaID" />
+      </Principal>
+      <Dependent Role="salvestus">
+        <PropertyRef Name="tarnija_tarnijaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tellimustellimuseToode">
+    <End Role="tellimus" Type="baas_kohvikJaPagaritookoda_mudel.Store.tellimusSet" Multiplicity="1" />
+    <End Role="tellimuseToode" Type="baas_kohvikJaPagaritookoda_mudel.Store.tellimuseToodeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tellimus">
+        <PropertyRef Name="tellimusID" />
+      </Principal>
+      <Dependent Role="tellimuseToode">
+        <PropertyRef Name="tellimus_tellimusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="toodetellimuseToode">
+    <End Role="toode" Type="baas_kohvikJaPagaritookoda_mudel.Store.toodeSet" Multiplicity="1" />
+    <End Role="tellimuseToode" Type="baas_kohvikJaPagaritookoda_mudel.Store.tellimuseToodeSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="toode">
+        <PropertyRef Name="toodeID" />
+      </Principal>
+      <Dependent Role="tellimuseToode">
+        <PropertyRef Name="toode_toodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="klientbroonering">
+    <End Role="klient" Type="baas_kohvikJaPagaritookoda_mudel.Store.klientSet" Multiplicity="1" />
+    <End Role="broonering" Type="baas_kohvikJaPagaritookoda_mudel.Store.brooneringSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="klient">
+        <PropertyRef Name="klientID" />
+      </Principal>
+      <Dependent Role="broonering">
+        <PropertyRef Name="klient_klientID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="baas_kohvikJaPagaritookoda_mudel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="baas_kohvikJaPagaritookoda_mudelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tootajaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.tootaja" />
+          <EntitySet Name="ametSet" EntityType="baas_kohvikJaPagaritookoda_mudel.amet" />
+          <EntitySet Name="ametimaaratusSet" EntityType="baas_kohvikJaPagaritookoda_mudel.ametimaaratus" />
+          <EntitySet Name="kohtSet" EntityType="baas_kohvikJaPagaritookoda_mudel.koht" />
+          <AssociationSet Name="ametametimaaratus" Association="baas_kohvikJaPagaritookoda_mudel.ametametimaaratus">
+            <End Role="amet" EntitySet="ametSet" />
+            <End Role="ametimaaratus" EntitySet="ametimaaratusSet" />
+          </AssociationSet>
+          <AssociationSet Name="tootajaametimaaratus" Association="baas_kohvikJaPagaritookoda_mudel.tootajaametimaaratus">
+            <End Role="tootaja" EntitySet="tootajaSet" />
+            <End Role="ametimaaratus" EntitySet="ametimaaratusSet" />
+          </AssociationSet>
+          <AssociationSet Name="kohtametimaaratus" Association="baas_kohvikJaPagaritookoda_mudel.kohtametimaaratus">
+            <End Role="koht" EntitySet="kohtSet" />
+            <End Role="ametimaaratus" EntitySet="ametimaaratusSet" />
+          </AssociationSet>
+          <EntitySet Name="kategooriaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.kategooria" />
+          <EntitySet Name="toodeSet" EntityType="baas_kohvikJaPagaritookoda_mudel.toode" />
+          <AssociationSet Name="kategooriatoode" Association="baas_kohvikJaPagaritookoda_mudel.kategooriatoode">
+            <End Role="kategooria" EntitySet="kategooriaSet" />
+            <End Role="toode" EntitySet="toodeSet" />
+          </AssociationSet>
+          <EntitySet Name="koostisosaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.koostisosa" />
+          <EntitySet Name="klientSet" EntityType="baas_kohvikJaPagaritookoda_mudel.klient" />
+          <EntitySet Name="laudSet" EntityType="baas_kohvikJaPagaritookoda_mudel.laud" />
+          <EntitySet Name="toodeKoostisosaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.toodeKoostisosa" />
+          <EntitySet Name="laduSet" EntityType="baas_kohvikJaPagaritookoda_mudel.ladu" />
+          <EntitySet Name="tellimusSet" EntityType="baas_kohvikJaPagaritookoda_mudel.tellimus" />
+          <EntitySet Name="tellimuseToodeSet" EntityType="baas_kohvikJaPagaritookoda_mudel.tellimuseToode" />
+          <EntitySet Name="tarnijaSet" EntityType="baas_kohvikJaPagaritookoda_mudel.tarnija" />
+          <EntitySet Name="arveSet" EntityType="baas_kohvikJaPagaritookoda_mudel.arve" />
+          <EntitySet Name="brooneringSet" EntityType="baas_kohvikJaPagaritookoda_mudel.broonering" />
+          <EntitySet Name="salvestusSet" EntityType="baas_kohvikJaPagaritookoda_mudel.salvestus" />
+          <AssociationSet Name="laudklient" Association="baas_kohvikJaPagaritookoda_mudel.laudklient">
+            <End Role="laud" EntitySet="laudSet" />
+            <End Role="klient" EntitySet="klientSet" />
+          </AssociationSet>
+          <AssociationSet Name="klienttellimus" Association="baas_kohvikJaPagaritookoda_mudel.klienttellimus">
+            <End Role="klient" EntitySet="klientSet" />
+            <End Role="tellimus" EntitySet="tellimusSet" />
+          </AssociationSet>
+          <AssociationSet Name="tellimusarve" Association="baas_kohvikJaPagaritookoda_mudel.tellimusarve">
+            <End Role="tellimus" EntitySet="tellimusSet" />
+            <End Role="arve" EntitySet="arveSet" />
+          </AssociationSet>
+          <AssociationSet Name="kohttellimus" Association="baas_kohvikJaPagaritookoda_mudel.kohttellimus">
+            <End Role="koht" EntitySet="kohtSet" />
+            <End Role="tellimus" EntitySet="tellimusSet" />
+          </AssociationSet>
+          <AssociationSet Name="toodetoodeKoostisosa" Association="baas_kohvikJaPagaritookoda_mudel.toodetoodeKoostisosa">
+            <End Role="toode" EntitySet="toodeSet" />
+            <End Role="toodeKoostisosa" EntitySet="toodeKoostisosaSet" />
+          </AssociationSet>
+          <AssociationSet Name="koostisosatoodeKoostisosa" Association="baas_kohvikJaPagaritookoda_mudel.koostisosatoodeKoostisosa">
+            <End Role="koostisosa" EntitySet="koostisosaSet" />
+            <End Role="toodeKoostisosa" EntitySet="toodeKoostisosaSet" />
+          </AssociationSet>
+          <AssociationSet Name="ladusalvestus" Association="baas_kohvikJaPagaritookoda_mudel.ladusalvestus">
+            <End Role="ladu" EntitySet="laduSet" />
+            <End Role="salvestus" EntitySet="salvestusSet" />
+          </AssociationSet>
+          <AssociationSet Name="koostisosasalvestus" Association="baas_kohvikJaPagaritookoda_mudel.koostisosasalvestus">
+            <End Role="koostisosa" EntitySet="koostisosaSet" />
+            <End Role="salvestus" EntitySet="salvestusSet" />
+          </AssociationSet>
+          <AssociationSet Name="tarnijasalvestus" Association="baas_kohvikJaPagaritookoda_mudel.tarnijasalvestus">
+            <End Role="tarnija" EntitySet="tarnijaSet" />
+            <End Role="salvestus" EntitySet="salvestusSet" />
+          </AssociationSet>
+          <AssociationSet Name="tellimustellimuseToode" Association="baas_kohvikJaPagaritookoda_mudel.tellimustellimuseToode">
+            <End Role="tellimus" EntitySet="tellimusSet" />
+            <End Role="tellimuseToode" EntitySet="tellimuseToodeSet" />
+          </AssociationSet>
+          <AssociationSet Name="toodetellimuseToode" Association="baas_kohvikJaPagaritookoda_mudel.toodetellimuseToode">
+            <End Role="toode" EntitySet="toodeSet" />
+            <End Role="tellimuseToode" EntitySet="tellimuseToodeSet" />
+          </AssociationSet>
+          <AssociationSet Name="klientbroonering" Association="baas_kohvikJaPagaritookoda_mudel.klientbroonering">
+            <End Role="klient" EntitySet="klientSet" />
+            <End Role="broonering" EntitySet="brooneringSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="tootaja">
+          <Key>
+            <PropertyRef Name="tootajaID" />
+          </Key>
+          <Property Name="tootajaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimi" Type="String" Nullable="false" />
+          <Property Name="isikukood" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="ametimaaratus" Relationship="baas_kohvikJaPagaritookoda_mudel.tootajaametimaaratus" FromRole="tootaja" ToRole="ametimaaratus" />
+        </EntityType>
+        <EntityType Name="amet">
+          <Key>
+            <PropertyRef Name="ametID" />
+          </Key>
+          <Property Name="ametID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <Property Name="kirjeldus" Type="String" Nullable="false" />
+          <NavigationProperty Name="ametimaaratus" Relationship="baas_kohvikJaPagaritookoda_mudel.ametametimaaratus" FromRole="amet" ToRole="ametimaaratus" />
+          </EntityType>
+        <EntityType Name="ametimaaratus">
+          <Key>
+            <PropertyRef Name="ametimaaratusID" />
+          </Key>
+          <Property Name="ametimaaratusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="algus_kuupaev" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="amet" Relationship="baas_kohvikJaPagaritookoda_mudel.ametametimaaratus" FromRole="ametimaaratus" ToRole="amet" />
+          <NavigationProperty Name="tootaja" Relationship="baas_kohvikJaPagaritookoda_mudel.tootajaametimaaratus" FromRole="ametimaaratus" ToRole="tootaja" />
+          <NavigationProperty Name="koht" Relationship="baas_kohvikJaPagaritookoda_mudel.kohtametimaaratus" FromRole="ametimaaratus" ToRole="koht" />
+        </EntityType>
+        <EntityType Name="koht">
+          <Key>
+            <PropertyRef Name="kohtID" />
+          </Key>
+          <Property Name="kohtID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kohtNimi" Type="String" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="tel" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="ametimaaratus" Relationship="baas_kohvikJaPagaritookoda_mudel.kohtametimaaratus" FromRole="koht" ToRole="ametimaaratus" />
+          <NavigationProperty Name="tellimus" Relationship="baas_kohvikJaPagaritookoda_mudel.kohttellimus" FromRole="koht" ToRole="tellimus" />
+        </EntityType>
+        <Association Name="ametametimaaratus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.amet" Role="amet" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.ametimaaratus" Role="ametimaaratus" Multiplicity="*" />
+        </Association>
+        <Association Name="tootajaametimaaratus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tootaja" Role="tootaja" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.ametimaaratus" Role="ametimaaratus" Multiplicity="*" />
+        </Association>
+        <Association Name="kohtametimaaratus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.koht" Role="koht" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.ametimaaratus" Role="ametimaaratus" Multiplicity="*" />
+        </Association>
+        <EntityType Name="kategooria">
+          <Key>
+            <PropertyRef Name="kategooriaID" />
+          </Key>
+          <Property Name="kategooriaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <Property Name="kirjeldus" Type="String" Nullable="false" />
+          <NavigationProperty Name="toode" Relationship="baas_kohvikJaPagaritookoda_mudel.kategooriatoode" FromRole="kategooria" ToRole="toode" />
+        </EntityType>
+        <EntityType Name="toode">
+          <Key>
+            <PropertyRef Name="toodeID" />
+          </Key>
+          <Property Name="toodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <Property Name="kirjeldus" Type="String" Nullable="false" />
+          <NavigationProperty Name="kategooria" Relationship="baas_kohvikJaPagaritookoda_mudel.kategooriatoode" FromRole="toode" ToRole="kategooria" />
+          <Property Name="hind" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <NavigationProperty Name="toodeKoostisosa" Relationship="baas_kohvikJaPagaritookoda_mudel.toodetoodeKoostisosa" FromRole="toode" ToRole="toodeKoostisosa" />
+          <NavigationProperty Name="tellimuseToode" Relationship="baas_kohvikJaPagaritookoda_mudel.toodetellimuseToode" FromRole="toode" ToRole="tellimuseToode" />
+        </EntityType>
+        <Association Name="kategooriatoode">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.kategooria" Role="kategooria" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.toode" Role="toode" Multiplicity="*" />
+        </Association>
+        <EntityType Name="koostisosa">
+          <Key>
+            <PropertyRef Name="koostisosaID" />
+          </Key>
+          <Property Name="koostisosaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <NavigationProperty Name="toodeKoostisosa" Relationship="baas_kohvikJaPagaritookoda_mudel.koostisosatoodeKoostisosa" FromRole="koostisosa" ToRole="toodeKoostisosa" />
+          <NavigationProperty Name="salvestus" Relationship="baas_kohvikJaPagaritookoda_mudel.koostisosasalvestus" FromRole="koostisosa" ToRole="salvestus" />
+        </EntityType>
+        <EntityType Name="klient">
+          <Key>
+            <PropertyRef Name="klientID" />
+          </Key>
+          <Property Name="klientID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimi" Type="String" Nullable="false" />
+          <NavigationProperty Name="laud" Relationship="baas_kohvikJaPagaritookoda_mudel.laudklient" FromRole="klient" ToRole="laud" />
+          <NavigationProperty Name="tellimus" Relationship="baas_kohvikJaPagaritookoda_mudel.klienttellimus" FromRole="klient" ToRole="tellimus" />
+          <NavigationProperty Name="broonering" Relationship="baas_kohvikJaPagaritookoda_mudel.klientbroonering" FromRole="klient" ToRole="broonering" />
+        </EntityType>
+        <EntityType Name="laud">
+          <Key>
+            <PropertyRef Name="laudID" />
+          </Key>
+          <Property Name="laudID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="number" Type="Int64" Nullable="false" />
+          <Property Name="kohtadeArv" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="klient" Relationship="baas_kohvikJaPagaritookoda_mudel.laudklient" FromRole="laud" ToRole="klient" />
+        </EntityType>
+        <EntityType Name="toodeKoostisosa">
+          <Key>
+            <PropertyRef Name="toodeKoostisosaID" />
+          </Key>
+          <Property Name="toodeKoostisosaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="toode" Relationship="baas_kohvikJaPagaritookoda_mudel.toodetoodeKoostisosa" FromRole="toodeKoostisosa" ToRole="toode" />
+          <NavigationProperty Name="koostisosa" Relationship="baas_kohvikJaPagaritookoda_mudel.koostisosatoodeKoostisosa" FromRole="toodeKoostisosa" ToRole="koostisosa" />
+          <Property Name="kogus" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ladu">
+          <Key>
+            <PropertyRef Name="laduID" />
+          </Key>
+          <Property Name="laduID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nimetus" Type="String" Nullable="false" />
+          <Property Name="aadress" Type="String" Nullable="false" />
+          <NavigationProperty Name="salvestus" Relationship="baas_kohvikJaPagaritookoda_mudel.ladusalvestus" FromRole="ladu" ToRole="salvestus" />
+        </EntityType>
+        <EntityType Name="tellimus">
+          <Key>
+            <PropertyRef Name="tellimusID" />
+          </Key>
+          <Property Name="tellimusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="klient" Relationship="baas_kohvikJaPagaritookoda_mudel.klienttellimus" FromRole="tellimus" ToRole="klient" />
+          <NavigationProperty Name="arve" Relationship="baas_kohvikJaPagaritookoda_mudel.tellimusarve" FromRole="tellimus" ToRole="arve" />
+          <NavigationProperty Name="koht" Relationship="baas_kohvikJaPagaritookoda_mudel.kohttellimus" FromRole="tellimus" ToRole="koht" />
+          <NavigationProperty Name="tellimuseToode" Relationship="baas_kohvikJaPagaritookoda_mudel.tellimustellimuseToode" FromRole="tellimus" ToRole="tellimuseToode" />
+        </EntityType>
+        <EntityType Name="tellimuseToode">
+          <Key>
+            <PropertyRef Name="tellimuseToodeID" />
+          </Key>
+          <Property Name="tellimuseToodeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tellimus" Relationship="baas_kohvikJaPagaritookoda_mudel.tellimustellimuseToode" FromRole="tellimuseToode" ToRole="tellimus" />
+          <NavigationProperty Name="toode" Relationship="baas_kohvikJaPagaritookoda_mudel.toodetellimuseToode" FromRole="tellimuseToode" ToRole="toode" />
+        </EntityType>
+        <EntityType Name="tarnija">
+          <Key>
+            <PropertyRef Name="tarnijaID" />
+          </Key>
+          <Property Name="tarnijaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tarnijaNimi" Type="String" Nullable="false" />
+          <NavigationProperty Name="salvestus" Relationship="baas_kohvikJaPagaritookoda_mudel.tarnijasalvestus" FromRole="tarnija" ToRole="salvestus" />
+        </EntityType>
+        <EntityType Name="arve">
+          <Key>
+            <PropertyRef Name="arveID" />
+          </Key>
+          <Property Name="arveID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="summa" Type="Decimal" Nullable="false" Precision="6" Scale="2" />
+          <Property Name="date" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tellimus" Relationship="baas_kohvikJaPagaritookoda_mudel.tellimusarve" FromRole="arve" ToRole="tellimus" />
+        </EntityType>
+        <EntityType Name="broonering">
+          <Key>
+            <PropertyRef Name="brooneringID" />
+          </Key>
+          <Property Name="brooneringID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aeg" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="klient" Relationship="baas_kohvikJaPagaritookoda_mudel.klientbroonering" FromRole="broonering" ToRole="klient" />
+        </EntityType>
+        <EntityType Name="salvestus">
+          <Key>
+            <PropertyRef Name="salvestusID" />
+          </Key>
+          <Property Name="salvestusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="ladu" Relationship="baas_kohvikJaPagaritookoda_mudel.ladusalvestus" FromRole="salvestus" ToRole="ladu" />
+          <NavigationProperty Name="koostisosa" Relationship="baas_kohvikJaPagaritookoda_mudel.koostisosasalvestus" FromRole="salvestus" ToRole="koostisosa" />
+          <NavigationProperty Name="tarnija" Relationship="baas_kohvikJaPagaritookoda_mudel.tarnijasalvestus" FromRole="salvestus" ToRole="tarnija" />
+        </EntityType>
+        <Association Name="laudklient">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.laud" Role="laud" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.klient" Role="klient" Multiplicity="*" />
+        </Association>
+        <Association Name="klienttellimus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.klient" Role="klient" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tellimus" Role="tellimus" Multiplicity="*" />
+        </Association>
+        <Association Name="tellimusarve">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tellimus" Role="tellimus" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.arve" Role="arve" Multiplicity="*" />
+        </Association>
+        <Association Name="kohttellimus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.koht" Role="koht" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tellimus" Role="tellimus" Multiplicity="*" />
+        </Association>
+        <Association Name="toodetoodeKoostisosa">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.toode" Role="toode" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.toodeKoostisosa" Role="toodeKoostisosa" Multiplicity="*" />
+        </Association>
+        <Association Name="koostisosatoodeKoostisosa">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.koostisosa" Role="koostisosa" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.toodeKoostisosa" Role="toodeKoostisosa" Multiplicity="*" />
+        </Association>
+        <Association Name="ladusalvestus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.ladu" Role="ladu" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.salvestus" Role="salvestus" Multiplicity="*" />
+        </Association>
+        <Association Name="koostisosasalvestus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.koostisosa" Role="koostisosa" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.salvestus" Role="salvestus" Multiplicity="*" />
+        </Association>
+        <Association Name="tarnijasalvestus">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tarnija" Role="tarnija" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.salvestus" Role="salvestus" Multiplicity="*" />
+        </Association>
+        <Association Name="tellimustellimuseToode">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tellimus" Role="tellimus" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tellimuseToode" Role="tellimuseToode" Multiplicity="*" />
+        </Association>
+        <Association Name="toodetellimuseToode">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.toode" Role="toode" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.tellimuseToode" Role="tellimuseToode" Multiplicity="*" />
+        </Association>
+        <Association Name="klientbroonering">
+          <End Type="baas_kohvikJaPagaritookoda_mudel.klient" Role="klient" Multiplicity="1" />
+          <End Type="baas_kohvikJaPagaritookoda_mudel.broonering" Role="broonering" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="baas_kohvikJaPagaritookoda_mudelStoreContainer" CdmEntityContainer="baas_kohvikJaPagaritookoda_mudelContainer">
+    <EntitySetMapping Name="tootajaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.tootaja)">
+        <MappingFragment StoreEntitySet="tootajaSet">
+          <ScalarProperty Name="tootajaID" ColumnName="tootajaID" />
+          <ScalarProperty Name="nimi" ColumnName="nimi" />
+          <ScalarProperty Name="isikukood" ColumnName="isikukood" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ametSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.amet)">
+        <MappingFragment StoreEntitySet="ametSet">
+          <ScalarProperty Name="ametID" ColumnName="ametID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+          <ScalarProperty Name="kirjeldus" ColumnName="kirjeldus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ametimaaratusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.ametimaaratus)">
+        <MappingFragment StoreEntitySet="ametimaaratusSet">
+          <ScalarProperty Name="ametimaaratusID" ColumnName="ametimaaratusID" />
+          <ScalarProperty Name="algus_kuupaev" ColumnName="algus_kuupaev" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kohtSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.koht)">
+        <MappingFragment StoreEntitySet="kohtSet">
+          <ScalarProperty Name="kohtID" ColumnName="kohtID" />
+          <ScalarProperty Name="kohtNimi" ColumnName="kohtNimi" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kategooriaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.kategooria)">
+        <MappingFragment StoreEntitySet="kategooriaSet">
+          <ScalarProperty Name="kategooriaID" ColumnName="kategooriaID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+          <ScalarProperty Name="kirjeldus" ColumnName="kirjeldus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toodeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.toode)">
+        <MappingFragment StoreEntitySet="toodeSet">
+          <ScalarProperty Name="toodeID" ColumnName="toodeID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+          <ScalarProperty Name="kirjeldus" ColumnName="kirjeldus" />
+          <ScalarProperty Name="hind" ColumnName="hind" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="koostisosaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.koostisosa)">
+        <MappingFragment StoreEntitySet="koostisosaSet">
+          <ScalarProperty Name="koostisosaID" ColumnName="koostisosaID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="klientSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.klient)">
+        <MappingFragment StoreEntitySet="klientSet">
+          <ScalarProperty Name="klientID" ColumnName="klientID" />
+          <ScalarProperty Name="nimi" ColumnName="nimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="laudSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.laud)">
+        <MappingFragment StoreEntitySet="laudSet">
+          <ScalarProperty Name="laudID" ColumnName="laudID" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="kohtadeArv" ColumnName="kohtadeArv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="toodeKoostisosaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.toodeKoostisosa)">
+        <MappingFragment StoreEntitySet="toodeKoostisosaSet">
+          <ScalarProperty Name="toodeKoostisosaID" ColumnName="toodeKoostisosaID" />
+          <ScalarProperty Name="kogus" ColumnName="kogus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="laduSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.ladu)">
+        <MappingFragment StoreEntitySet="laduSet">
+          <ScalarProperty Name="laduID" ColumnName="laduID" />
+          <ScalarProperty Name="nimetus" ColumnName="nimetus" />
+          <ScalarProperty Name="aadress" ColumnName="aadress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tellimusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.tellimus)">
+        <MappingFragment StoreEntitySet="tellimusSet">
+          <ScalarProperty Name="tellimusID" ColumnName="tellimusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tellimuseToodeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.tellimuseToode)">
+        <MappingFragment StoreEntitySet="tellimuseToodeSet">
+          <ScalarProperty Name="tellimuseToodeID" ColumnName="tellimuseToodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tarnijaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.tarnija)">
+        <MappingFragment StoreEntitySet="tarnijaSet">
+          <ScalarProperty Name="tarnijaID" ColumnName="tarnijaID" />
+          <ScalarProperty Name="tarnijaNimi" ColumnName="tarnijaNimi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="arveSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.arve)">
+        <MappingFragment StoreEntitySet="arveSet">
+          <ScalarProperty Name="arveID" ColumnName="arveID" />
+          <ScalarProperty Name="summa" ColumnName="summa" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="brooneringSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.broonering)">
+        <MappingFragment StoreEntitySet="brooneringSet">
+          <ScalarProperty Name="brooneringID" ColumnName="brooneringID" />
+          <ScalarProperty Name="aeg" ColumnName="aeg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="salvestusSet">
+      <EntityTypeMapping TypeName="IsTypeOf(baas_kohvikJaPagaritookoda_mudel.salvestus)">
+        <MappingFragment StoreEntitySet="salvestusSet">
+          <ScalarProperty Name="salvestusID" ColumnName="salvestusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ametametimaaratus" TypeName="baas_kohvikJaPagaritookoda_mudel.ametametimaaratus" StoreEntitySet="ametimaaratusSet">
+      <EndProperty Name="amet">
+        <ScalarProperty Name="ametID" ColumnName="amet_ametID" />
+      </EndProperty>
+      <EndProperty Name="ametimaaratus">
+        <ScalarProperty Name="ametimaaratusID" ColumnName="ametimaaratusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tootajaametimaaratus" TypeName="baas_kohvikJaPagaritookoda_mudel.tootajaametimaaratus" StoreEntitySet="ametimaaratusSet">
+      <EndProperty Name="tootaja">
+        <ScalarProperty Name="tootajaID" ColumnName="tootaja_tootajaID" />
+      </EndProperty>
+      <EndProperty Name="ametimaaratus">
+        <ScalarProperty Name="ametimaaratusID" ColumnName="ametimaaratusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="kohtametimaaratus" TypeName="baas_kohvikJaPagaritookoda_mudel.kohtametimaaratus" StoreEntitySet="ametimaaratusSet">
+      <EndProperty Name="koht">
+        <ScalarProperty Name="kohtID" ColumnName="koht_kohtID" />
+      </EndProperty>
+      <EndProperty Name="ametimaaratus">
+        <ScalarProperty Name="ametimaaratusID" ColumnName="ametimaaratusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="kategooriatoode" TypeName="baas_kohvikJaPagaritookoda_mudel.kategooriatoode" StoreEntitySet="toodeSet">
+      <EndProperty Name="kategooria">
+        <ScalarProperty Name="kategooriaID" ColumnName="kategooria_kategooriaID" />
+      </EndProperty>
+      <EndProperty Name="toode">
+        <ScalarProperty Name="toodeID" ColumnName="toodeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="laudklient" TypeName="baas_kohvikJaPagaritookoda_mudel.laudklient" StoreEntitySet="klientSet">
+      <EndProperty Name="laud">
+        <ScalarProperty Name="laudID" ColumnName="laud_laudID" />
+      </EndProperty>
+      <EndProperty Name="klient">
+        <ScalarProperty Name="klientID" ColumnName="klientID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="klienttellimus" TypeName="baas_kohvikJaPagaritookoda_mudel.klienttellimus" StoreEntitySet="tellimusSet">
+      <EndProperty Name="klient">
+        <ScalarProperty Name="klientID" ColumnName="klient_klientID" />
+      </EndProperty>
+      <EndProperty Name="tellimus">
+        <ScalarProperty Name="tellimusID" ColumnName="tellimusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tellimusarve" TypeName="baas_kohvikJaPagaritookoda_mudel.tellimusarve" StoreEntitySet="arveSet">
+      <EndProperty Name="tellimus">
+        <ScalarProperty Name="tellimusID" ColumnName="tellimus_tellimusID" />
+      </EndProperty>
+      <EndProperty Name="arve">
+        <ScalarProperty Name="arveID" ColumnName="arveID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="kohttellimus" TypeName="baas_kohvikJaPagaritookoda_mudel.kohttellimus" StoreEntitySet="tellimusSet">
+      <EndProperty Name="koht">
+        <ScalarProperty Name="kohtID" ColumnName="koht_kohtID" />
+      </EndProperty>
+      <EndProperty Name="tellimus">
+        <ScalarProperty Name="tellimusID" ColumnName="tellimusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="toodetoodeKoostisosa" TypeName="baas_kohvikJaPagaritookoda_mudel.toodetoodeKoostisosa" StoreEntitySet="toodeKoostisosaSet">
+      <EndProperty Name="toode">
+        <ScalarProperty Name="toodeID" ColumnName="toode_toodeID" />
+      </EndProperty>
+      <EndProperty Name="toodeKoostisosa">
+        <ScalarProperty Name="toodeKoostisosaID" ColumnName="toodeKoostisosaID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="koostisosatoodeKoostisosa" TypeName="baas_kohvikJaPagaritookoda_mudel.koostisosatoodeKoostisosa" StoreEntitySet="toodeKoostisosaSet">
+      <EndProperty Name="koostisosa">
+        <ScalarProperty Name="koostisosaID" ColumnName="koostisosa_koostisosaID" />
+      </EndProperty>
+      <EndProperty Name="toodeKoostisosa">
+        <ScalarProperty Name="toodeKoostisosaID" ColumnName="toodeKoostisosaID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ladusalvestus" TypeName="baas_kohvikJaPagaritookoda_mudel.ladusalvestus" StoreEntitySet="salvestusSet">
+      <EndProperty Name="ladu">
+        <ScalarProperty Name="laduID" ColumnName="ladu_laduID" />
+      </EndProperty>
+      <EndProperty Name="salvestus">
+        <ScalarProperty Name="salvestusID" ColumnName="salvestusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="koostisosasalvestus" TypeName="baas_kohvikJaPagaritookoda_mudel.koostisosasalvestus" StoreEntitySet="salvestusSet">
+      <EndProperty Name="koostisosa">
+        <ScalarProperty Name="koostisosaID" ColumnName="koostisosa_koostisosaID" />
+      </EndProperty>
+      <EndProperty Name="salvestus">
+        <ScalarProperty Name="salvestusID" ColumnName="salvestusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tarnijasalvestus" TypeName="baas_kohvikJaPagaritookoda_mudel.tarnijasalvestus" StoreEntitySet="salvestusSet">
+      <EndProperty Name="tarnija">
+        <ScalarProperty Name="tarnijaID" ColumnName="tarnija_tarnijaID" />
+      </EndProperty>
+      <EndProperty Name="salvestus">
+        <ScalarProperty Name="salvestusID" ColumnName="salvestusID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="tellimustellimuseToode" TypeName="baas_kohvikJaPagaritookoda_mudel.tellimustellimuseToode" StoreEntitySet="tellimuseToodeSet">
+      <EndProperty Name="tellimus">
+        <ScalarProperty Name="tellimusID" ColumnName="tellimus_tellimusID" />
+      </EndProperty>
+      <EndProperty Name="tellimuseToode">
+        <ScalarProperty Name="tellimuseToodeID" ColumnName="tellimuseToodeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="toodetellimuseToode" TypeName="baas_kohvikJaPagaritookoda_mudel.toodetellimuseToode" StoreEntitySet="tellimuseToodeSet">
+      <EndProperty Name="toode">
+        <ScalarProperty Name="toodeID" ColumnName="toode_toodeID" />
+      </EndProperty>
+      <EndProperty Name="tellimuseToode">
+        <ScalarProperty Name="tellimuseToodeID" ColumnName="tellimuseToodeID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="klientbroonering" TypeName="baas_kohvikJaPagaritookoda_mudel.klientbroonering" StoreEntitySet="brooneringSet">
+      <EndProperty Name="klient">
+        <ScalarProperty Name="klientID" ColumnName="klient_klientID" />
+      </EndProperty>
+      <EndProperty Name="broonering">
+        <ScalarProperty Name="brooneringID" ColumnName="brooneringID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a69f1d6f36bb4707a3adc53187b49aa1" Name="Diagram1" ZoomLevel="59" >
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.tootaja" Width="1.875" PointX="0.875" PointY="1" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.amet" Width="1.5" PointX="5.625" PointY="1.125" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.ametimaaratus" Width="1.5" PointX="3.5" PointY="1.125" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.koht" Width="1.5" PointX="0.875" PointY="3.625" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.ametametimaaratus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.tootajaametimaaratus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.kohtametimaaratus" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.kategooria" Width="1.5" PointX="3.125" PointY="3.625" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.toode" Width="1.5" PointX="5.5" PointY="3.875" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.kategooriatoode" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.koostisosa" Width="1.5" PointX="7.5" PointY="4.375" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.klient" Width="1.5" PointX="1.25" PointY="6.5" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.laud" Width="1.5" PointX="3.125" PointY="6.625" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.toodeKoostisosa" Width="1.875" PointX="5.375" PointY="6.625" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.ladu" Width="1.5" PointX="7.75" PointY="6.75" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.tellimus" Width="1.5" PointX="1.375" PointY="9" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.tellimuseToode" Width="1.5" PointX="3.375" PointY="9.125" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.tarnija" Width="1.5" PointX="5.5" PointY="9.125" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.arve" Width="1.5" PointX="2.625" PointY="11.125" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.broonering" Width="1.5" PointX="5.25" PointY="11" />
+        <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.salvestus" Width="1.5" PointX="7.75" PointY="9.125" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.laudklient" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.klienttellimus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.tellimusarve" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.kohttellimus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.toodetoodeKoostisosa" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.koostisosatoodeKoostisosa" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.ladusalvestus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.koostisosasalvestus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.tarnijasalvestus" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.tellimustellimuseToode" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.toodetellimuseToode" />
+        <AssociationConnector Association="baas_kohvikJaPagaritookoda_mudel.klientbroonering" ManuallyRouted="true" >
+          <ConnectorPoint PointX="1.28125" PointY="8.4802864583333335" />
+          <ConnectorPoint PointX="1.28125" PointY="13.062251813704416" />
+          <ConnectorPoint PointX="4.68605132545034" PointY="13.062251813704416" />
+          <ConnectorPoint PointX="4.68605132545034" PointY="11.03125" />
+          <ConnectorPoint PointX="5.25" PointY="11.03125" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
