@@ -7,7 +7,8 @@
         AutoGenerateColumns="False"
         DataKeyNames="tootajaID"
         DataSourceID="SqlDataSource2"
-        EmptyDataText="Andmeid ei leitud." OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="313px">
+        EmptyDataText="Andmeid ei leitud." OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="313px" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="tootajaID"
                 HeaderText="tootajaID" ReadOnly="True" InsertVisible="False" SortExpression="tootajaID" />
@@ -18,6 +19,16 @@
             <asp:CommandField ShowEditButton="True" />
             <asp:CommandField ShowDeleteButton="True" />
         </Columns>
+        <EditRowStyle BackColor="#2461BF" />
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
+        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+        <SortedDescendingHeaderStyle BackColor="#4870BE" />
     </asp:GridView>
         <asp:SqlDataSource
             ID="SqlDataSource2"

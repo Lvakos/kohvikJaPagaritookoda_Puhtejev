@@ -5,7 +5,11 @@
         <h2 id="title">&nbsp;</h2>
         <h3>Ametimääratus tabel</h3>
 <p>
-    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="ametimaaratusID" DataSourceID="SqlDataSource2_ametitootaja">
+    <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AutoGenerateRows="False" DataKeyNames="ametimaaratusID" DataSourceID="SqlDataSource2_ametitootaja" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <AlternatingRowStyle BackColor="White" />
+        <CommandRowStyle BackColor="#D1DDF1" Font-Bold="True" />
+        <EditRowStyle BackColor="#2461BF" />
+        <FieldHeaderStyle BackColor="#DEE8F5" Font-Bold="True" />
         <Fields>
             <asp:BoundField DataField="ametimaaratusID" HeaderText="ametimaaratusID" InsertVisible="False" ReadOnly="True" SortExpression="ametimaaratusID" />
             <asp:TemplateField HeaderText="algus_kuupaev" SortExpression="algus_kuupaev">
@@ -78,6 +82,10 @@
             </asp:TemplateField>
             <asp:CommandField ShowInsertButton="True" />
         </Fields>
+        <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EFF3FB" />
     </asp:DetailsView>
     <asp:SqlDataSource ID="SqlDataSource2_ametitootaja" runat="server" ConnectionString="<%$ ConnectionStrings:kohvikjapagarikodaConnectionString1 %>" DeleteCommand="DELETE FROM [ametimaaratusSet] WHERE [ametimaaratusID] = @ametimaaratusID" InsertCommand="INSERT INTO [ametimaaratusSet] ([algus_kuupaev], [amet_ametID], [tootaja_tootajaID], [koht_kohtID]) VALUES (@algus_kuupaev, @amet_ametID, @tootaja_tootajaID, @koht_kohtID)" SelectCommand="SELECT * FROM [ametimaaratusSet]" UpdateCommand="UPDATE [ametimaaratusSet] SET [algus_kuupaev] = @algus_kuupaev, [amet_ametID] = @amet_ametID, [tootaja_tootajaID] = @tootaja_tootajaID, [koht_kohtID] = @koht_kohtID WHERE [ametimaaratusID] = @ametimaaratusID">
         <DeleteParameters>
