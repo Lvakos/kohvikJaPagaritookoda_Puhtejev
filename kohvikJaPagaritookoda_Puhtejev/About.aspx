@@ -36,36 +36,6 @@
         <h3>Your application description page.</h3>
         <p>Use this area to provide additional information.</p>
     <p><strong>Lisa töötaja</strong></p>
-    <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="tootajaID" DataSourceID="SqlDataSource2" Height="50px" OnPageIndexChanging="DetailsView1_PageIndexChanging" Width="297px">
-        <Fields>
-            <asp:BoundField DataField="tootajaID" HeaderText="tootajaID" InsertVisible="False" ReadOnly="True" SortExpression="tootajaID" />
-            <asp:BoundField DataField="nimi" HeaderText="nimi" SortExpression="nimi" />
-            <asp:BoundField DataField="isikukood" HeaderText="isikukood" SortExpression="isikukood" />
-            <asp:CommandField ShowInsertButton="True" />
-        </Fields>
-    </asp:DetailsView>
-    <br />
-    <br />
-    Ametit<br />
-    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="ametid" Width="354px">
-        <Columns>
-            <asp:BoundField DataField="nimetus" HeaderText="nimetus" SortExpression="nimetus" />
-            <asp:BoundField DataField="kirjeldus" HeaderText="kirjeldus" SortExpression="kirjeldus" />
-            <asp:CommandField ShowEditButton="True" />
-        </Columns>
-    </asp:GridView>
-    <strong>
-    <asp:SqlDataSource ID="ametid" runat="server" ConnectionString="<%$ ConnectionStrings:KohvikConnectionString %>" SelectCommand="SELECT [nimetus], [kirjeldus] FROM [ametSet]" InsertCommand="INSERT INTO [ametSet] ([nimetus], [kirjeldus]) VALUES (@nimetus, @kirjeldus)"></asp:SqlDataSource>
-    <br />
-    Lisa Ameti<br />
-    </strong>
-    <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataSourceID="ametid" Height="50px" Width="350px">
-        <Fields>
-            <asp:BoundField DataField="nimetus" HeaderText="nimetus" SortExpression="nimetus" />
-            <asp:BoundField DataField="kirjeldus" HeaderText="kirjeldus" SortExpression="kirjeldus" />
-            <asp:CommandField ShowInsertButton="True" />
-        </Fields>
-    </asp:DetailsView>
     <strong>
     <br />
     </strong>

@@ -3,17 +3,26 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
         <h2 id="title"><%: Title %>.</h2>
-        <h3>Your contact page.</h3>
-        <address>
-            One Microsoft Way<br />
-            Redmond, WA 98052-6399<br />
-            <abbr title="Phone">P:</abbr>
-            425.555.0100
-        </address>
-
-        <address>
-            <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-            <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-        </address>
+        <h3>Ametit</h3>
+    Ametit<br />
+    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="ametid" Width="354px">
+        <Columns>
+            <asp:BoundField DataField="nimetus" HeaderText="nimetus" SortExpression="nimetus" />
+            <asp:BoundField DataField="kirjeldus" HeaderText="kirjeldus" SortExpression="kirjeldus" />
+            <asp:CommandField ShowEditButton="True" />
+        </Columns>
+    </asp:GridView>
+    <strong>
+    <asp:SqlDataSource ID="ametid" runat="server" ConnectionString="<%$ ConnectionStrings:KohvikConnectionString %>" SelectCommand="SELECT [nimetus], [kirjeldus] FROM [ametSet]" InsertCommand="INSERT INTO [ametSet] ([nimetus], [kirjeldus]) VALUES (@nimetus, @kirjeldus)"></asp:SqlDataSource>
+    <br />
+    Lisa Ameti<br />
+    </strong>
+    <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataSourceID="ametid" Height="50px" Width="350px" DefaultMode="Insert">
+        <Fields>
+            <asp:BoundField DataField="nimetus" HeaderText="nimetus" SortExpression="nimetus" />
+            <asp:BoundField DataField="kirjeldus" HeaderText="kirjeldus" SortExpression="kirjeldus" />
+            <asp:CommandField ShowInsertButton="True" />
+        </Fields>
+    </asp:DetailsView>
     </main>
 </asp:Content>
