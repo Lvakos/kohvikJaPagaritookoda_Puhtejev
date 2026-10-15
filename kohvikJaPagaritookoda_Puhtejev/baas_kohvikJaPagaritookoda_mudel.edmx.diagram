@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="a69f1d6f36bb4707a3adc53187b49aa1" Name="Diagram1" ZoomLevel="59" >
+      <Diagram DiagramId="a69f1d6f36bb4707a3adc53187b49aa1" Name="Diagram1" ZoomLevel="88" >
         <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.tootaja" Width="1.875" PointX="0.875" PointY="1" />
         <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.amet" Width="1.5" PointX="5.625" PointY="1.125" />
         <EntityTypeShape EntityType="baas_kohvikJaPagaritookoda_mudel.ametimaaratus" Width="1.5" PointX="3.5" PointY="1.125" />

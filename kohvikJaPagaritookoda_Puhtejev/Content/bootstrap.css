@@ -211,7 +211,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 700;
 }
 
 small, .small {
@@ -306,6 +306,8 @@ svg {
 table {
   caption-side: bottom;
   border-collapse: collapse;
+    margin-right: 42px;
+    margin-top: 7px;
 }
 
 caption {

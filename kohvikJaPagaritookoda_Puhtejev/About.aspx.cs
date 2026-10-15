@@ -13,5 +13,15 @@ namespace kohvikJaPagaritookoda_Puhtejev
         {
 
         }
+
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
+
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
